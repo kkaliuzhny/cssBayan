@@ -1,0 +1,74 @@
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+.primary
+{
+    max-width: 50em;
+    margin:auto;
+}
+.primary-item
+{
+    max-width: 60%;
+    margin: auto;
+}
+.primary-picture
+{
+    display:none;
+}
+.meme1
+{
+    width:120%;
+}
+/*meme name*/
+.primary-title
+{
+    
+    display:block;
+    padding:1em, 1.5em;
+    cursor: pointer;
+    position: relative;
+    transition: background .2s 
+   ease-out;
+}
+.primary-title:hover
+{
+background-color: coral;
+}
+/*button*/
+.primary-input
+{
+    width:0;
+    height:0;
+    appearance: none;
+    position:absolute;
+}
+/*checking for clicking a button*/
+.primary-input:checked~.primary-picture
+{
+    display: block;
+}
+.primary-input:checked~.primary-title
+{
+    background-color: coral;
+}
+
+.primary-title::after
+{
+content:"";
+display:block;
+position:absolute;
+top:50%;
+right:15px;
+transform: translateY(-50%);
+border-style: solid;
+border-width: 10px 5px 0 5px;
+border-color: black transparent transparent transparent
+}
+.primary-input:checked~.primary-title::after
+{
+    border-style: solid;
+border-width: 0 5px 10px 5px;
+border-color: transparent transparent black transparent;
+}
