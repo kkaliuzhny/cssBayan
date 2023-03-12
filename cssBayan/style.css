@@ -2,7 +2,7 @@ body
 {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    background-color:#f1e6d4;
+    background-color:#c4dfe6;
 }
 .primary
 {
@@ -40,14 +40,15 @@ body
     padding:1em, 1.5em;
     cursor: pointer;
     margin-top:auto;
-    transition: background 1.2s 
-   ease-out;
+   color:#66A5AD;
+   transition: 1.2s; 
 }
 h2
 {
     max-width: 80%;
     margin: auto;
     font-size:3em;
+    color:#003b46;
 }
 /*button*/
 .primary-input
@@ -69,7 +70,7 @@ h2
 
 .primary-input:checked~.primary-title
 {
-    color:#a39274;
+    color:#07575b;
 }
 .icon_plus
 {
@@ -77,34 +78,69 @@ h2
     margin-left:95%;
     margin-top:-6.3%;
 }
-.primary:hover > * .icon_plus
-{
-    opacity:1;
-    transition:1.2s;
-}
+
 .primary-input:checked ~ * .icon_plus
 {
     transform: rotate(45deg);
 }
-.primary-item:hover > * .icon_plus/*if hover*/
+
+
+
+@media(hover: hover)
 {
-    transform: rotate(45deg);
-    opacity:1;
-    transition:1.2s;
+    .primary:hover > * .primary-title
+    {
+        color:#07575b;
+        transition: 1.2s;
+    }
+    .primary:hover > * .icon_plus
+    {
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .icon_plus/*if hover*/
+    {
+        transform: rotate(45deg);
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .primary-picture
+    {
+        height:100%;
+        width:100%;
+        transition:1.2s;
+        overflow: visible;
+        opacity:1;
+    }
+    .primary-item:hover > .primary-title
+    {
+        transition:1.2s;
+        color:#07575b;
+    }
 }
-.primary-item:hover > * .primary-picture
+
+@media(hover: none)
 {
-    height:100%;
-    width:100%;
-    transition:1.2s;
-    overflow: visible;
-    opacity:1;
+    .icon_plus
+    {
+        opacity:1;
+    }
+    .primary:hover > * .icon_plus
+    {
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .icon_plus/*if hover*/
+    {
+        transform: rotate(45deg);
+        opacity:1;
+        transition:1.2s;
+    }
 }
-.primary-item:hover > .primary-title
-{
-    transition:1.2s;
-  color: #a39274;
-}
+
+
+
+
 
 /*---------------------tablet_version------------------------------------------------*/
 
