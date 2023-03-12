@@ -1,0 +1,189 @@
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    background-color:#c4dfe6;
+}
+.primary
+{
+    max-width: 50em;
+    margin-left:auto;
+    margin-right:auto;
+  
+}
+.primary-item
+{
+    max-width: 80%;
+    margin: auto;
+    border-bottom: 0.1em solid rgb(183, 183, 183);
+}
+.primary-picture
+{
+    height:0;
+    transition:1.2s;
+    overflow:hidden;
+    opacity:0;
+}
+.meme1
+{
+    max-width:70%;
+    margin-left:15%;
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+
+/*meme name*/
+.primary-title
+{
+    display:block;
+    font-size:2em;
+    padding:1em, 1.5em;
+    cursor: pointer;
+    margin-top:auto;
+   color:#66A5AD;
+   transition: 1.2s; 
+}
+h2
+{
+    max-width: 80%;
+    margin: auto;
+    font-size:3em;
+    color:#003b46;
+}
+/*button*/
+.primary-input
+{
+    width:0;
+    height:0;
+    appearance: none;
+}
+
+/*checking for clicking a button*/
+.primary-input:checked~ * .primary-picture
+{
+    transition:1.2s;
+    width: 100%;
+    height:100%;
+    opacity: 1;
+    overflow:visible;
+}
+
+.primary-input:checked~.primary-title
+{
+    color:#07575b;
+}
+.icon_plus
+{
+    opacity:0;
+    margin-left:95%;
+    margin-top:-6.3%;
+}
+
+.primary-input:checked ~ * .icon_plus
+{
+    transform: rotate(45deg);
+}
+
+
+
+@media(hover: hover)
+{
+    .primary:hover > * .primary-title
+    {
+        color:#07575b;
+        transition: 1.2s;
+    }
+    .primary:hover > * .icon_plus
+    {
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .icon_plus/*if hover*/
+    {
+        transform: rotate(45deg);
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .primary-picture
+    {
+        height:100%;
+        width:100%;
+        transition:1.2s;
+        overflow: visible;
+        opacity:1;
+    }
+    .primary-item:hover > .primary-title
+    {
+        transition:1.2s;
+        color:#07575b;
+    }
+}
+
+@media(hover: none)
+{
+    .icon_plus
+    {
+        opacity:1;
+    }
+    .primary:hover > * .icon_plus
+    {
+        opacity:1;
+        transition:1.2s;
+    }
+    .primary-item:hover > * .icon_plus/*if hover*/
+    {
+        transform: rotate(45deg);
+        opacity:1;
+        transition:1.2s;
+    }
+}
+
+
+
+
+
+/*---------------------tablet_version------------------------------------------------*/
+
+@media (max-width:820px)
+{
+    .primary-title
+    {
+        font-size:1.5em;
+        margin-bottom:0.6em;
+    }
+    h2
+    {
+        font-size:2em;
+    }
+    .meme1
+    {
+        margin-top:2em;
+    }
+    .icon_plus
+    {
+        margin-top:-5%;
+    }
+}
+/*---------------------mobile_version------------------------------------------------*/
+
+@media (max-width:320px)
+{
+    .primary-title
+    {
+        font-size:1em;
+        margin-bottom:0em;
+    }
+    h2
+    {
+        font-size:1.2em;
+    }
+    .meme1
+    {
+        margin-top:1em;
+    }
+    .icon_plus
+    {
+        margin-top:-8.75%;
+    }
+   
+}
